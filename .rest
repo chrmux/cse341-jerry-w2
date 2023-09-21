@@ -7,3 +7,12 @@ GET http://localhost:8080/contacts/650c1ac8fc1f6abffcdfa4c6 HTTP/1.1
 
 ###
 GET http://localhost:8080/contacts/650c1b2cfc1f6abffcdfa4c7 HTTP/1.1
+
+###
+GET https://cse341-jerry.onrender.com/contacts HTTP/1.1
+
+###
+GET https://cse341-jerry.onrender.com/contacts/650c1ac8fc1f6abffcdfa4c6 HTTP/1.1
+
+###
+GET https://cse341-jerry.onrender.com/contacts/650c1b2cfc1f6abffcdfa4c7 HTTP/1.1
