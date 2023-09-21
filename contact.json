@@ -1,0 +1,16 @@
+{
+    "contact": {
+        "firstName": "Jerry",
+        "LastName": "Marollano",
+        "email": "jnmarollano@gmail.com",
+        "favoriteColor": "Gray",
+        "birthday": "09/25/87"
+    },
+    "contact2": {
+        "firstName": "Catherine",
+        "lastName": "Marollano",
+        "email": "catherinemarollano5@gmail.com",
+        "favoriteColor": "Purple",
+        "birthday": "09/28/88"
+      }
+}
