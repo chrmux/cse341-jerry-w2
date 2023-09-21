@@ -1,14 +1,9 @@
-GET http://localhost:3000 HTTP/1.1
-
-###
-GET http://localhost:3000/first HTTP/1.1
-
 ###
 GET http://localhost:8080/contacts HTTP/1.1
 
 
 ###
-GET http://localhost:8080/contacts/6505b3f1d8721ce2cfbb3cf7 HTTP/1.1
+GET http://localhost:8080/contacts/650bdb63812f39a9b4c17926 HTTP/1.1
 
 ###
-GET http://localhost:8080/contacts/650bd7d2812f39a9b4c17925 HTTP/1.1
+GET http://localhost:8080/contacts/650bdbb1812f39a9b4c17927 HTTP/1.1
