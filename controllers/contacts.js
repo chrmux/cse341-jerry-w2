@@ -12,7 +12,7 @@ const getSingleContact = async (req, res, next) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db()
+    .db('cse341db')
     .collection('contacts')
     .find({
       _id: userId
