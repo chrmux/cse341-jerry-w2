@@ -6,11 +6,11 @@
         "favoriteColor": "Purple",
         "birthday": "09/28/88"
     },
-    "contact2": {    
+    "contact2": {
         "firstName": "Jerry",
         "LastName": "Marollano",
         "email": "jnmarollano@gmail.com",
         "favoriteColor": "Gray",
         "birthday": "09/25/87"
-      }
+    }
 }
