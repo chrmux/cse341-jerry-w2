@@ -23,30 +23,25 @@ POST http://localhost:8080/contacts/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "contact3": {
-    "_id": "651839ba617efac962321219",
     "firstName": "kiev",
-    "LastName": "Marollano",
+    "lastName": "Marollano",
     "email": "test@gmail.com",
-    "favoriteColor": "Yellow",
+    "favoriteColor": "Red",
     "birthday": "09/26/2017"
-  }
 }
 ###
-PUT http://localhost:8080/contacts/65183ca6a1ebbcedecb9bbc2 HTTP/1.1
+PUT http://localhost:8080/contacts/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "contact3": {
     "firstName": "kiev",
     "lastName": "Marollano",
     "email": "test@gmail.com",
     "favoriteColor": "Yellow",
     "birthday": "09/26/2017"
-  }
 }
 ### DELETE contact 
-DELETE http://localhost:8080/contacts/65183ca6a1ebbcedecb9bbc2 HTTP/1.1
+DELETE http://localhost:8080/contacts/ HTTP/1.1
 
 
 ### Create contact 
