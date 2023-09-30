@@ -16,3 +16,54 @@ GET https://cse341-jerry.onrender.com/contacts/650c1ac8fc1f6abffcdfa4c6 HTTP/1.1
 
 ###
 GET https://cse341-jerry.onrender.com/contacts/650c1b2cfc1f6abffcdfa4c7 HTTP/1.1
+
+###
+POST http://localhost:8080/contacts/ HTTP/1.1
+
+
+
+###
+PUT http://localhost:8080/contacts/65182c37de54517baa35598d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "kiev",
+    "LastName": "Marollano",
+    "email": "test@gmail.com",
+    "favoriteColor": "Gray",
+    "birthday": "09/26/2017"
+  }
+
+
+
+### DELETE contact 
+DELETE http://localhost:8080/contacts/65182c37de54517baa35598d HTTP/1.1
+
+
+### Create contact 
+POST https://cse341-jerry.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "kiev",
+    "LastName": "Marollano",
+    "email": "test@gmail.com",
+    "favoriteColor": "Yellow",
+    "birthday": "09/26/2017"
+  }
+
+### PUT contact 
+PUT https://cse341-jerry.onrender.com/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "kiev",
+    "LastName": "Marollano",
+    "email": "test@gmail.com",
+    "favoriteColor": "Yellow",
+    "birthday": "09/26/2017"
+  }
+ 
+
+###
+DELETE https://cse341-jerry.onrender.com/contacts/650c1b2cfc1f6abffcdfa4c7 HTTP/1.1
