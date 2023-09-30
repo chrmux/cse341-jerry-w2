@@ -10,7 +10,7 @@
   "contact2": {
     "_id": "650c1b2cfc1f6abffcdfa4c7",
     "firstName": "Jerry",
-    "LastName": "Marollano",
+    "lastName": "Marollano",
     "email": "jnmarollano@gmail.com",
     "favoriteColor": "Gray",
     "birthday": "09/25/87"
