@@ -7,7 +7,8 @@
     "start": "nodemon server.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "swagger": "node ./swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,10 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "mongodb": "^6.1.0"
+    "mongodb": "^6.1.0",
+    "swagger": "^0.7.5",
+    "swagger-json": "^2.0.0",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.3",
@@ -24,7 +28,8 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^1.18.4",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "swagger-autogen": "^2.23.6"
   },
   "engines": {
     "node": ">=14 <18.17.1"
