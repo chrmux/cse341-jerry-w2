@@ -44,6 +44,18 @@ DELETE http://localhost:8080/contacts/ HTTP/1.1
 
 
 ### Create contact 
+PUT https://cse341-jerry.onrender.com/contacts/651c1182add8c3bea965dc89 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Kesia",
+"lastName": "Marollano",
+"email": "keshM@gmail.com",
+"favoriteColor": "Pink",
+"birthday": "12/22/2014"
+}
+
+### PUT contact 
 POST https://cse341-jerry.onrender.com/contacts/ HTTP/1.1
 Content-Type: application/json
 
@@ -51,7 +63,7 @@ Content-Type: application/json
   "firstName": "keilah",
   "lastName": "Marollano",
   "email": "keilahM@gmail.com",
-  "favoriteColor": "orange",
+  "favoriteColor": "Orange",
   "birthday": "12/22/2014"
 }
 
