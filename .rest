@@ -1,7 +1,6 @@
 ###
 GET http://localhost:8080/users HTTP/1.1
 
-
 ###
 POST http://localhost:8080/users/ HTTP/1.1
 Content-Type: application/json
@@ -12,6 +11,12 @@ Content-Type: application/json
     "password": "123456789",
 }
 
+  "firstName": "keilah",
+  "lastName": "Marollano",
+  "email": "keilahM@gmail.com",
+  "favoriteColor": "orange",
+  "birthday": "12/22/2014"
+}
 ###
 PUT http://localhost:8080/users/65184ca6045e466af26e7fd1 HTTP/1.1
 Content-Type: application/json
@@ -20,6 +25,11 @@ Content-Type: application/json
     "firstName": "kiev",
     "lastName": "Marollano",
     "email": "test@gmail.com",
+  "firstName": "keilah",
+  "lastName": "Marollano",
+  "email": "keilahM@gmail.com",
+  "favoriteColor": "Green",
+  "birthday": "12/22/2014"
 }
 ### DELETE contact 
 DELETE http://localhost:8080/users/652a3471096f97f468e02463 HTTP/1.1
@@ -30,6 +40,19 @@ GET http://localhost:8080/users/652173580ba563e06a149b4f HTTP/1.1
 
 ### Create contact 
 POST https://cse341-jerry.onrender.com/users/ HTTP/1.1
+PUT https://cse341-jerry.onrender.com/contacts/651c1182add8c3bea965dc89 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Kesia",
+"lastName": "Marollano",
+"email": "keshM@gmail.com",
+"favoriteColor": "Pink",
+"birthday": "12/22/2014"
+}
+
+### PUT contact 
+POST https://cse341-jerry.onrender.com/contacts/ HTTP/1.1
 Content-Type: application/json
 
 {
@@ -39,18 +62,20 @@ Content-Type: application/json
 }
 ### PUT contact 
 PUT https://cse341-jerry.onrender.com/users/65184d6be71f1179af67e3b7 HTTP/1.1
+PUT https://cse341-jerry.onrender.com/contacts/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Kiev",
-    "lastName": "Marollano",
-    "email": "test@gmail.com",
-    "favoriteColor": "Yellow",
-    "birthday": "09/26/2017"
-  }
+  "firstName": "keilah",
+  "lastName": "Marollano",
+  "email": "keilahM@gmail.com",
+  "favoriteColor": "Green",
+  "birthday": "12/22/2014"
+}
 
 ###
 DELETE https://cse341-jerry.onrender.com/users/65184d6be71f1179af67e3b7 HTTP/1.1
+DELETE https://cse341-jerry.onrender.com/contacts/ HTTP/1.1
 
 ###
 GET https://cse341-jerry.onrender.com/users HTTP/1.1
