@@ -1,16 +1,15 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "api server for a Project management website.\n",
+    "description": "API server for a Project Mgmt website.\n",
     "version": "1.0.0",
-    "title": "Person Project"
-    
+    "title": "Project Mgmt"
   },
   "host": "https://cse341-project-ugb4.onrender.com",
   "basePath": "/",
   "tags": [
     {
-      "name": "Projects",
+      "name": "project",
       "description": "Operations about project"
     },
     {
@@ -24,7 +23,7 @@
   ],
   "schemes": ["https"],
   "paths": {
-    "/user": {
+    "/users": {
       "post": {
         "tags": ["user"],
         "summary": "Create user",
@@ -56,137 +55,6 @@
                   "type": "string",
                   "example": "Nike Theme"
                 }
-    "swagger": "2.0",
-    "info": {
-      "title": "My API for Personal Project",
-      "description": "CSE341 Personal Project API",
-      "version": "1.0.0"
-    },
-    "host": "cse341-project-ugb4.onrender.com",
-    "basePath": "/",
-    "schemes": [
-      "https"
-    ],
-    "paths": {
-      "/users/": {
-        "get": {
-          "tags": [
-            "users"
-          ],
-          "description": "Endpoint get all users",
-          "parameters": [],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
-          }
-        },
-        "post": {
-          "tags": ["users"],
-          "summary": "Create user",
-          "description": "This is for when a user creates an account",
-          "operationId": "createUser",
-          "produces": ["application/json"],
-          "parameters": [],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
-          }
-        }
-      }
-    },
-    "definitions": {
-      "users": {
-        "type": "object",
-        "required": ["password", "username"],
-        "properties": {
-          "_id": {
-            "type": "integer",
-            "format": "string"
-          },
-          "username": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "lastName": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "address": {
-            "type": "string"
-          }
-        }
-      },
-      "/users/{id}": {
-        "put": {
-          "tags": [
-            "users"
-          ],
-          "description": "Endpoint update a user",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "path",
-              "required": true,
-              "type": "string"
-            },
-            {
-              "name": "users",
-              "in": "body",
-              "description": "User Information",
-              "required": true,
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "firstName": {
-                    "type": "string",
-                    "example": "Jerry"
-                  },
-                  "lastName": {
-                    "type": "string",
-                    "example": "Marollano"
-                  },
-                  "email": {
-                    "type": "string",
-                    "example": "mail@test.com"
-                  },
-                  "birthday": {
-                    "type": "string",
-                    "example": "09/25/1987"
-                  },
-                  "phone": {
-                    "type": "string",
-                    "example": "1234567890"
-                  },
-                  "address": {
-                    "type": "string",
-                    "example": "P-6 POB AREA"
-                  }
-                },
-                "required": [
-                    "username",
-                  "password",
-                  "firstName",
-                  "lastName",
-                  "email",
-                  "birthday",
-                  "phone",
-                  "address"
-                ]
               }
             }
           },
@@ -196,7 +64,7 @@
         }
       }
     },
-    "/user/login": {
+    "/users/login": {
       "get": {
         "tags": ["Not Yet Implemented"],
         "summary": "Logs user into the system",
@@ -243,7 +111,7 @@
         }
       }
     },
-    "/user/logout": {
+    "/users/logout": {
       "get": {
         "tags": ["Not Yet Implemented"],
         "summary": "Logs out current logged in user session",
@@ -287,7 +155,19 @@
           }
         }
       },
-    "/user": {
+        "responses": {
+          "204": {
+            "description": "Successfully modified user"
+          },
+          "400": {
+            "description": "Invalid user supplied"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      },
+    "/users": {
       "get": {
         "tags": ["user"],
         "summary": "Get all users",
@@ -360,7 +240,19 @@
         }
       }
     },
-      "projects": {
+    "Credentials": {
+      "type": "object",
+      "required": ["password", "username"],
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Projects": {
       "type": "object",
       "properties": {
         "title": {
@@ -386,12 +278,32 @@
           "items": {
             "type": "string"
           }
-        }
-             }
+        }      }
     },
     
-    
-        "references": {
+    "User_profile": {
+      "type": "object",
+      "properties": {
+        },
+        "usenamr": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/User_profile_education"
+          }
+        },
+        "email": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/User_profile_projects"
+          }
+        },
+        "firstname": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lastname": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/User_profile_references"
