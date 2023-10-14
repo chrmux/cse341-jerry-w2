@@ -56,6 +56,137 @@
                   "type": "string",
                   "example": "Nike Theme"
                 }
+    "swagger": "2.0",
+    "info": {
+      "title": "My API for Personal Project",
+      "description": "CSE341 Personal Project API",
+      "version": "1.0.0"
+    },
+    "host": "cse341-project-ugb4.onrender.com",
+    "basePath": "/",
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/users/": {
+        "get": {
+          "tags": [
+            "users"
+          ],
+          "description": "Endpoint get all users",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "post": {
+          "tags": ["users"],
+          "summary": "Create user",
+          "description": "This is for when a user creates an account",
+          "operationId": "createUser",
+          "produces": ["application/json"],
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "users": {
+        "type": "object",
+        "required": ["password", "username"],
+        "properties": {
+          "_id": {
+            "type": "integer",
+            "format": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          }
+        }
+      },
+      "/users/{id}": {
+        "put": {
+          "tags": [
+            "users"
+          ],
+          "description": "Endpoint update a user",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "users",
+              "in": "body",
+              "description": "User Information",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string",
+                    "example": "Jerry"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "example": "Marollano"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "mail@test.com"
+                  },
+                  "birthday": {
+                    "type": "string",
+                    "example": "09/25/1987"
+                  },
+                  "phone": {
+                    "type": "string",
+                    "example": "1234567890"
+                  },
+                  "address": {
+                    "type": "string",
+                    "example": "P-6 POB AREA"
+                  }
+                },
+                "required": [
+                    "username",
+                  "password",
+                  "firstName",
+                  "lastName",
+                  "email",
+                  "birthday",
+                  "phone",
+                  "address"
+                ]
               }
             }
           },
