@@ -5,7 +5,7 @@
       "description": "CSE341 Personal Project API",
       "version": "1.0.0"
     },
-    "host": "cse341-project.onrender.com",
+    "host": "cse341-project-ugb4.onrender.com",
     "basePath": "/",
     "schemes": [
       "https"
@@ -97,19 +97,19 @@
                 "properties": {
                   "firstName": {
                     "type": "string",
-                    "example": "Alirio"
+                    "example": "Jerry"
                   },
                   "lastName": {
                     "type": "string",
-                    "example": "Mieres"
+                    "example": "Marollano"
                   },
                   "email": {
                     "type": "string",
-                    "example": "andres@test.com"
+                    "example": "mail@test.com"
                   },
                   "birthday": {
                     "type": "string",
-                    "example": "06/19/2000"
+                    "example": "09/25/1987"
                   },
                   "phone": {
                     "type": "string",
@@ -117,10 +117,12 @@
                   },
                   "address": {
                     "type": "string",
-                    "example": "Calle 123"
+                    "example": "P-6 POB AREA"
                   }
                 },
                 "required": [
+                    "username",
+                  "password",
                   "firstName",
                   "lastName",
                   "email",
@@ -163,7 +165,7 @@
           }
         }
       },
-      "/user/login": {
+      "/users/login": {
         "get": {
           "tags": ["Not Yet Implemented"],
           "summary": "Logs user into the system",
@@ -210,7 +212,7 @@
           }
         }
       },
-      "/user/logout": {
+      "/users/logout": {
         "get": {
           "tags": ["Not Yet Implemented"],
           "summary": "Logs out current logged in user session",
